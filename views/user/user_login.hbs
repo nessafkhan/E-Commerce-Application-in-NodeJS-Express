@@ -1,0 +1,28 @@
+<div class="row">
+    <div class=" col-md-6 m-auto ">
+        <div class="container mt-5 pl-5">
+            <h3 class="text-center">Log In</h3>
+            <form action="/user_login" method="POST" enctype="multipart/form-data">
+                {{#if loginErr}}
+                <p class="loginError danger">{{loginErr}}</p>
+                {{/if}}
+                <div class="form-label-group">
+                    <label for="inputEmail">Email address</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter email" required>
+                </div>
+
+                <div class="form-label-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+                </div>
+                <div class="form-label-group mt-4">
+                    <a href="/user_signup">Create new Account?</a>
+                    <button class="btn btn-primary float-right mt-4" type="submit">SIGN IN</button>
+
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<section>
+    <div class="container">
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Quantity</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each products}}
+                <tr>
+
+                    <td><img src="/product_images/{{this.product._id}}.jpg" alt="" style="height: 70px;width: 70px;">
+                    </td>
+                    <td>{{this.product.title}}</td>
+
+                    {{#if this.quantity}}
+                    <td><button class="btn btn-primary" class="cart_item_count mr-3"
+                            onclick="changeQuantity('{{this._id}}','{{this.product._id}}','-1')">-</button>{{this.quantity}}
+                        {{/if}}
+                        <button class="btn btn-primary" class="cart_item_count ml-3"
+                            onclick="changeQuantity('{{this._id}}','{{this.product._id}}','1')">+</button>
+                    </td>
+                    <td>
+                        <Button class="btn btn-danger">Remove</Button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>

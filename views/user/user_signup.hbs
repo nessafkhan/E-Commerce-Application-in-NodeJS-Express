@@ -1,0 +1,25 @@
+<div class="row">
+    <div class=" col-md-6 m-auto ">
+        <div class="container mt-5 pl-5">
+            <h3 class="text-center">Sign Up</h3>
+            <form action="/user_signup" method="POST" enctype="multipart/form-data">
+                <div class="form-label-group">
+                    <label>Full Name</label>
+                    <input type="text" name="fullName" class="form-control" placeholder="Enter name" required>
+                </div>
+                <div class="form-label-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter email" required>
+                </div>
+
+                <div class="form-label-group">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+                </div>
+                <a href="/user_login">Already have an account?</a>
+                <button class="btn btn-primary float-right mt-4" type="submit">SIGN UP</button>
+            </form>
+        </div>
+
+    </div>
+</div>
